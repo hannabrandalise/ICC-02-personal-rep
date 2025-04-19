@@ -1,29 +1,31 @@
 #!/bin/python
 
-print ("Escolha uma das opções: ")
-print ("1- Read and display names")
-print ("2- Add a new name")
-print ("3- Exit")
+opcao = ""
 
-opcao = input("Opção desejada: ")
+while opcao != "3":
 
-if opcao == "1":
+    print ("Escolha uma das opções: ")
+    print ("1- Read and display names")
+    print ("2- Add a new name")
+    print ("3- Exit\n")
+    opcao = input()
+    print()
 
-    with open ("names.txt", "r") as file:
-        content = file.read()
-    print (content)
+    if opcao == "1":
+
+        with open ("names.txt", "r") as file:
+            content = file.read()
+        print (content + "\n")
    
-elif opcao == "2":
-   with open ("names.txt", "r+") as file: 
-    content = file.read()
-    new_name = input ("Nome a adicionar: ")
-    file.write (new_name + "\n")
-        
-    print("Conteúdo atualizado:")
-    print (content + new_name)
+    elif opcao == "2":
+        new_name = input ("Nome a adicionar: ")
+        with open ("names.txt", "a") as file: 
+            file.write (new_name + "\n")
+        print(f"\n'{new_name}' adicionado com sucesso!")
+        print ("\nLista atualizada:\n" + content + new_name + "\n")
    
-elif opcao == "3":
-   print ("Exit")
+    elif opcao == "3":
+        print ("=================================Exit=================================")
 
-else:
-   print ("Opção inválida")
+    else:
+        print ("Opção inválida\n")

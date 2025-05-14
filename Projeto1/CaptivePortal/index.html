@@ -8,19 +8,19 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f9fa;
+      background-color: #1e1e2f; /* Fundo escuro */
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      color: #008ca3;
+      color: #ffffff;
     }
 
     .login-box {
-      background-color: #ffffff;
+      background-color: #2a2a40; /* Caixa com cinza escuro */
       padding: 40px;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
       text-align: center;
       max-width: 360px;
       width: 100%;
@@ -33,7 +33,7 @@
 
     h2 {
       margin-bottom: 20px;
-      color: #008ca3;
+      color: #00bcd4; /* Azul suave */
     }
 
     input[type="text"],
@@ -41,7 +41,9 @@
       width: 100%;
       padding: 12px;
       margin: 10px 0;
-      border: 1px solid #c0dfe4;
+      border: 1px solid #555;
+      background-color: #1b1b2c;
+      color: #fff;
       border-radius: 6px;
       font-size: 14px;
     }
@@ -49,7 +51,7 @@
     input[type="submit"] {
       width: 100%;
       padding: 12px;
-      background-color: #008ca3;
+      background-color: #00bcd4;
       color: white;
       border: none;
       border-radius: 6px;
@@ -59,11 +61,11 @@
     }
 
     input[type="submit"]:hover {
-      background-color: #006d82;
+      background-color: #0097a7;
     }
 
     .message {
-      color: red;
+      color: #ff6b6b;
       font-size: 14px;
       margin-top: 15px;
       display: none;
@@ -73,7 +75,7 @@
       position: absolute;
       bottom: 10px;
       font-size: 12px;
-      color: #999;
+      color: #ccc;
     }
   </style>
 </head>
@@ -91,7 +93,6 @@
   <footer>&copy; 2025 Datafort Solutions. All rights reserved.</footer>
 
   <script>
-    // Hide message box if there's no actual error
     const msgEl = document.getElementById('portal-message');
     if (!msgEl.innerText.includes(' ')) {
       msgEl.style.display = 'none';
